@@ -28,16 +28,60 @@
                                     <action selector="populateDatabase:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eAp-RW-HDe"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hj3-4Q-sLw">
+                                <rect key="frame" x="102" y="82" width="210.5" height="61"/>
+                                <string key="text">Delete all future events
+before populating database
+to avoid duplicates!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aoe-zr-RAH">
+                                <rect key="frame" x="137.5" y="832" width="139" height="30"/>
+                                <state key="normal" title="Delete future events">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteFutureEvents:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CB6-rm-Gqr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFh-om-7G0">
+                                <rect key="frame" x="126.5" y="794" width="161" height="30"/>
+                                <state key="normal" title="Check for future events"/>
+                                <connections>
+                                    <action selector="checkForFurureEvents:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uUh-kt-iDi"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tX6-bO-jRY">
+                                <rect key="frame" x="95.5" y="745" width="223" height="41"/>
+                                <string key="text">You can check whether there
+are future events or not</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="8Mh-Vs-dBh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0DV-9b-ebv"/>
+                            <constraint firstItem="tX6-bO-jRY" firstAttribute="centerX" secondItem="fFh-om-7G0" secondAttribute="centerX" id="5OZ-Mz-KLJ"/>
                             <constraint firstItem="SER-hw-OwG" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Dd3-YR-hYh"/>
+                            <constraint firstItem="hj3-4Q-sLw" firstAttribute="top" secondItem="8Mh-Vs-dBh" secondAttribute="bottom" constant="8" id="EGX-8t-oVN"/>
+                            <constraint firstItem="fFh-om-7G0" firstAttribute="top" secondItem="tX6-bO-jRY" secondAttribute="bottom" constant="8" id="G81-mf-xYa"/>
+                            <constraint firstItem="Aoe-zr-RAH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="a3R-VR-n5r"/>
+                            <constraint firstItem="fFh-om-7G0" firstAttribute="centerX" secondItem="Aoe-zr-RAH" secondAttribute="centerX" id="bLd-eP-7Ol"/>
+                            <constraint firstItem="Aoe-zr-RAH" firstAttribute="top" secondItem="fFh-om-7G0" secondAttribute="bottom" constant="8" id="dA4-dW-PfS"/>
                             <constraint firstItem="8Mh-Vs-dBh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hJx-Vh-ud7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Aoe-zr-RAH" secondAttribute="bottom" id="q3l-fX-SwB"/>
+                            <constraint firstItem="hj3-4Q-sLw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qPB-lX-ZLL"/>
                             <constraint firstItem="SER-hw-OwG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="zlC-js-Eib"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="futureEventCheckerLabel" destination="tX6-bO-jRY" id="SPC-oa-l7G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

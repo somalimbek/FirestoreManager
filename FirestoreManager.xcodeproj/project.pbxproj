@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,12 @@
 		16CE71AB246EA54E009E6D2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16CE71A9246EA54E009E6D2B /* Main.storyboard */; };
 		16CE71AD246EA553009E6D2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16CE71AC246EA553009E6D2B /* Assets.xcassets */; };
 		16CE71B0246EA553009E6D2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16CE71AE246EA553009E6D2B /* LaunchScreen.storyboard */; };
+		16CE71B8246EA737009E6D2B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16CE71B7246EA737009E6D2B /* GoogleService-Info.plist */; };
+		16CE71C3246EAAC6009E6D2B /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CE71C2246EAAC6009E6D2B /* Date.swift */; };
+		16CE71C8246EAB10009E6D2B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CE71C5246EAB10009E6D2B /* Event.swift */; };
+		16CE71C9246EAB10009E6D2B /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CE71C6246EAB10009E6D2B /* Venue.swift */; };
+		16CE71CA246EAB10009E6D2B /* Sport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CE71C7246EAB10009E6D2B /* Sport.swift */; };
+		2A0050C392B78E6C459EC461 /* Pods_FirestoreManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F31F46FE835BC7FE611B27 /* Pods_FirestoreManager.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,14 @@
 		16CE71AC246EA553009E6D2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16CE71AF246EA553009E6D2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16CE71B1246EA553009E6D2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16CE71B7246EA737009E6D2B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		16CE71C2246EAAC6009E6D2B /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		16CE71C5246EAB10009E6D2B /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		16CE71C6246EAB10009E6D2B /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		16CE71C7246EAB10009E6D2B /* Sport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sport.swift; sourceTree = "<group>"; };
+		484E4F5BAB6BEF53F221DB86 /* Pods-FirestoreManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirestoreManager.debug.xcconfig"; path = "Target Support Files/Pods-FirestoreManager/Pods-FirestoreManager.debug.xcconfig"; sourceTree = "<group>"; };
+		F0FE6DBB24A54090340F917B /* Pods-FirestoreManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirestoreManager.release.xcconfig"; path = "Target Support Files/Pods-FirestoreManager/Pods-FirestoreManager.release.xcconfig"; sourceTree = "<group>"; };
+		F9F31F46FE835BC7FE611B27 /* Pods_FirestoreManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirestoreManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A0050C392B78E6C459EC461 /* Pods_FirestoreManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +57,8 @@
 			children = (
 				16CE71A2246EA54E009E6D2B /* FirestoreManager */,
 				16CE71A1246EA54E009E6D2B /* Products */,
+				2034D4B8879ABD69D13643A4 /* Pods */,
+				6B5AEB6DCCEC15451DC8DAE0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +73,45 @@
 		16CE71A2246EA54E009E6D2B /* FirestoreManager */ = {
 			isa = PBXGroup;
 			children = (
+				16CE71C4246EAB10009E6D2B /* SportsfellaModel */,
+				16CE71C2246EAAC6009E6D2B /* Date.swift */,
 				16CE71A3246EA54E009E6D2B /* AppDelegate.swift */,
 				16CE71A5246EA54E009E6D2B /* SceneDelegate.swift */,
 				16CE71A7246EA54E009E6D2B /* ViewController.swift */,
 				16CE71A9246EA54E009E6D2B /* Main.storyboard */,
 				16CE71AC246EA553009E6D2B /* Assets.xcassets */,
 				16CE71AE246EA553009E6D2B /* LaunchScreen.storyboard */,
+				16CE71B7246EA737009E6D2B /* GoogleService-Info.plist */,
 				16CE71B1246EA553009E6D2B /* Info.plist */,
 			);
 			path = FirestoreManager;
+			sourceTree = "<group>";
+		};
+		16CE71C4246EAB10009E6D2B /* SportsfellaModel */ = {
+			isa = PBXGroup;
+			children = (
+				16CE71C5246EAB10009E6D2B /* Event.swift */,
+				16CE71C6246EAB10009E6D2B /* Venue.swift */,
+				16CE71C7246EAB10009E6D2B /* Sport.swift */,
+			);
+			path = SportsfellaModel;
+			sourceTree = "<group>";
+		};
+		2034D4B8879ABD69D13643A4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				484E4F5BAB6BEF53F221DB86 /* Pods-FirestoreManager.debug.xcconfig */,
+				F0FE6DBB24A54090340F917B /* Pods-FirestoreManager.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6B5AEB6DCCEC15451DC8DAE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9F31F46FE835BC7FE611B27 /* Pods_FirestoreManager.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +121,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 16CE71B4246EA553009E6D2B /* Build configuration list for PBXNativeTarget "FirestoreManager" */;
 			buildPhases = (
+				4CEC03FC37EA7FD70A20957E /* [CP] Check Pods Manifest.lock */,
 				16CE719C246EA54E009E6D2B /* Sources */,
 				16CE719D246EA54E009E6D2B /* Frameworks */,
 				16CE719E246EA54E009E6D2B /* Resources */,
+				AD231DD9E58B5D06AE9B0351 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16CE71B0246EA553009E6D2B /* LaunchScreen.storyboard in Resources */,
+				16CE71B8246EA737009E6D2B /* GoogleService-Info.plist in Resources */,
 				16CE71AD246EA553009E6D2B /* Assets.xcassets in Resources */,
 				16CE71AB246EA54E009E6D2B /* Main.storyboard in Resources */,
 			);
@@ -133,14 +183,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4CEC03FC37EA7FD70A20957E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FirestoreManager-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD231DD9E58B5D06AE9B0351 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FirestoreManager/Pods-FirestoreManager-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FirestoreManager/Pods-FirestoreManager-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FirestoreManager/Pods-FirestoreManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		16CE719C246EA54E009E6D2B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16CE71CA246EAB10009E6D2B /* Sport.swift in Sources */,
+				16CE71C3246EAAC6009E6D2B /* Date.swift in Sources */,
+				16CE71C9246EAB10009E6D2B /* Venue.swift in Sources */,
 				16CE71A8246EA54E009E6D2B /* ViewController.swift in Sources */,
 				16CE71A4246EA54E009E6D2B /* AppDelegate.swift in Sources */,
 				16CE71A6246EA54E009E6D2B /* SceneDelegate.swift in Sources */,
+				16CE71C8246EAB10009E6D2B /* Event.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +378,7 @@
 		};
 		16CE71B5246EA553009E6D2B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 484E4F5BAB6BEF53F221DB86 /* Pods-FirestoreManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +397,7 @@
 		};
 		16CE71B6246EA553009E6D2B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0FE6DBB24A54090340F917B /* Pods-FirestoreManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
