@@ -74,9 +74,9 @@ class ViewController: UIViewController {
         let batch = db.batch()
         
         let venuesAndParticipantsForSports = [
-            Sport.soccer: (venue: Venue(name: "ELTE Bogdánfy utca", address: "1117 Budapest, Bogdánfy u. 10/A.", mapsLink: URL(string: "https://goo.gl/maps/iKCtNC8TXoDoWSir5")!), participants: 1),
-            Sport.basketball: (venue: Venue(name: "MoM Sport", address: "1123 Budapest, Csörsz u. 14-16.", mapsLink: URL(string: "https://goo.gl/maps/Y8WJ3GzimF18ecAv6")!), participants: 1),
-            Sport.volleyball: (venue: Venue(name: "ELTE Mérnök utca", address: "1119 Budapest, Mérnök utca 35.", mapsLink: URL(string: "https://goo.gl/maps/dLLyFpcLTBYoFPu27")!), participants: 1)
+            Sport.soccer: (venue: Venue(name: "ELTE Bogdánfy utca", address: "1117 Budapest, Bogdánfy u. 10/A.", mapsLink: URL(string: "https://goo.gl/maps/iKCtNC8TXoDoWSir5")!), participants: 12),
+            Sport.basketball: (venue: Venue(name: "MoM Sport", address: "1123 Budapest, Csörsz u. 14-16.", mapsLink: URL(string: "https://goo.gl/maps/Y8WJ3GzimF18ecAv6")!), participants: 10),
+            Sport.volleyball: (venue: Venue(name: "ELTE Mérnök utca", address: "1119 Budapest, Mérnök utca 35.", mapsLink: URL(string: "https://goo.gl/maps/dLLyFpcLTBYoFPu27")!), participants: 8)
         ]
         let dates = generateDates()
         
@@ -93,7 +93,7 @@ class ViewController: UIViewController {
                     "venue-name": venue.name,
                     "venue-address": venue.address,
                     "venue-maps-link": venue.mapsLink.absoluteString,
-                    "registered-users": [String]()
+                    "registered-users": [String](repeating: "asd", count: maxParticipants - 1)
                 ]
                 batch.setData(newEventData, forDocument: newEventRef)
             }
