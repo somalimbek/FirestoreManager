@@ -93,7 +93,14 @@ class ViewController: UIViewController {
                     "venue-name": venue.name,
                     "venue-address": venue.address,
                     "venue-maps-link": venue.mapsLink.absoluteString,
-                    "registered-users": [String](repeating: "asd", count: maxParticipants - 1)
+                    "registered-users": [String](repeating: "asd", count: maxParticipants - 1),
+                    "price": 2000,
+                    "rules": ["delay policy", "allowed footwears", "lorem ipsum", "dolor set"],
+                    "how-to-get-in": "Look for the entrance.",
+                    "cancel-policy": "You should not cancel your registration",
+                    "field-type": "Artificial grass",
+                    "gender": "all",
+                    "status": 1
                 ]
                 batch.setData(newEventData, forDocument: newEventRef)
             }
@@ -113,7 +120,7 @@ class ViewController: UIViewController {
     
     private func generateDates() -> [Date] {
         var dates = [Date]()
-        let destinationDay = Date.now.addingDateComponents(DateComponents(month: 3))!.month.date!
+        let destinationDay = Date.now.addingDateComponents(DateComponents(weekOfMonth: 2))!.day.date!
         var weekday = Date.Weekday.monday
         var day = Date.now.next(weekday)
         
